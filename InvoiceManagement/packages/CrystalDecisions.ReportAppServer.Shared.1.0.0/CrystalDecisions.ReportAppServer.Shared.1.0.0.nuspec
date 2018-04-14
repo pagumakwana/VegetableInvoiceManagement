@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CrystalDecisions.ReportAppServer.Shared</id>
+    <version>1.0.0</version>
+    <title>CrystalDecisions.ReportAppServer.Shared</title>
+    <authors>Lucas</authors>
+    <owners>Lucas</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CrystalDecisions.ReportAppServer.Shared</description>
+    <summary />
+  </metadata>
+</package>

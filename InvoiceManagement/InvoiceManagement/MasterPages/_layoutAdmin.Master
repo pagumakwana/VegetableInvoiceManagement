@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="_layoutAdmin.master.cs" Inherits="InvoiceManagement.MasterPages._layoutAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!-- Bootstrap 3.3.6 -->    
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link href="/plugins/select2/select2.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css" />
+    <link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- jQuery 2.2.3 -->
+    <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/select2/select2.min.js"></script>
+
+    <!-- SlimScroll -->
+
+    <script src="/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="/plugins/fastclick/fastclick.js"></script>
+
+
+    <!-- AdminLTE App -->
+    <script src="/dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+
+    <%--<script src="/dist/js/demo.js"></script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue layout-top-nav" >
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="scriptmanager" runat="server"></asp:ScriptManager>
+        <div class="wrapper">
+
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a href="/Module/Report/dashboard.aspx" class="navbar-brand"><b>M </b>| Vegetable suppliers</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="/Module/Report/dashboard.aspx"><i class="glyphicon glyphicon-dashboard"></i>&nbsp;Dashboard <span class="sr-only">(current)</span></a></li>
+                                <li><a href="/Module/Client/listclient.aspx"><i class="glyphicon glyphicon-user"></i>&nbsp;Client </a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tasks"></i>&nbsp;Manage Invoice <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/Module/Invoice/newinvoice.aspx">New Invoice</a></li>
+                                        <li><a href="/Module/Invoice/listinvoice.aspx">List Invoice</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/Module/User/listuser.aspx"><i class="glyphicon glyphicon-user"></i>&nbsp;User </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search" />
+                                </div>
+                            </div>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= Session["UserName"].ToString() %> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Message</a></li>
+                                        <li class="divider"></li>
+                                        <li><asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Log out</asp:LinkButton></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+
+            <!-- =============================================== -->
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper" style="background:url('/dist/images/dashboardbg1.jpg');background-size:cover;background-repeat:no-repeat;">
+                <!-- Content Header (Page header) -->
+                <%-- <section class="content-header">
+                    <h1>Blank page
+       
+                        <small>it all starts here</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+                        <li><a href="#">Examples</a></li>
+                        <li class="active">Blank page</li>
+                    </ol>
+                </section>--%>
+
+                <!-- Main content -->
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!-- /.content-wrapper -->
+
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Beta</b> version 1.00
+   
+                </div>
+                <strong>Copyright &copy; 2017 <a href="#">DECODE</a>.</strong> All rights
+    reserved.
+ 
+            </footer>
+        </div>
+        <script src="/dist/js/custome.js"></script>
+        <script>
+            $('.select2').select2();
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CrystalReports</id>
+    <version>13.0.5.891</version>
+    <title>CrystalReports</title>
+    <authors>OCOFRE</authors>
+    <owners>OCOFRE</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CrystalReports 13.0.5.891, x86</description>
+    <summary>CrystalReports 13.0.5.891</summary>
+  </metadata>
+</package>
