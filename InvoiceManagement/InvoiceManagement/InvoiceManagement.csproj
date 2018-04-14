@@ -308,6 +308,7 @@
     <Content Include="Module\Invoice\viewinvoicereport.aspx" />
     <Content Include="Module\Report\dashboard.aspx" />
     <Content Include="Module\User\listuser.aspx" />
+    <Content Include="pdf\TextFile1.txt" />
     <Content Include="plugins\bootstrap-multiselect-master\dist\css\bootstrap-multiselect.css" />
     <Content Include="plugins\bootstrap-multiselect-master\dist\js\bootstrap-multiselect.js" />
     <Content Include="plugins\bootstrap-multiselect-master\docs\css\bootstrap-3.3.2.min.css" />
@@ -1829,9 +1830,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="pdf\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
